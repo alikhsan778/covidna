@@ -1,0 +1,5 @@
+.DS_Store
+xcuserdata/
+Pods/
+R.generated.swift
+covid-19.xcworkspace

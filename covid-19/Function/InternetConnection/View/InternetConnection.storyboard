@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Internet Connection View Controller-->
+        <scene sceneID="8bz-Ny-3ur">
+            <objects>
+                <viewController storyboardIdentifier="InternetConnectionViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="CHA-uN-Tvd" customClass="InternetConnectionViewController" customModule="Covidna" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yd3-yI-N9o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jE-ar-g5b">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7r-jg-RAi">
+                                <rect key="frame" x="50" y="353" width="314" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connection-off" translatesAutoresizingMaskIntoConstraints="NO" id="M5M-q8-vcf">
+                                        <rect key="frame" x="0.0" y="15" width="314" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="115" id="ySB-YK-W5J"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Connection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="E0R-ol-AIz">
+                                        <rect key="frame" x="0.0" y="130" width="314" height="27"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" red="0.1960784314" green="0.56862745100000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NM7-yB-UK6">
+                                        <rect key="frame" x="0.0" y="160" width="314" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="6HP-Sa-meI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Retry"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radiusCorner">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="retryAction:" destination="CHA-uN-Tvd" eventType="touchUpInside" id="4Vk-Cd-Deh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="NM7-yB-UK6" secondAttribute="trailing" id="1Xi-FZ-QMc"/>
+                                    <constraint firstItem="E0R-ol-AIz" firstAttribute="top" secondItem="M5M-q8-vcf" secondAttribute="bottom" id="1zf-y1-xwP"/>
+                                    <constraint firstItem="M5M-q8-vcf" firstAttribute="leading" secondItem="U7r-jg-RAi" secondAttribute="leading" id="8OZ-qQ-uNB"/>
+                                    <constraint firstItem="E0R-ol-AIz" firstAttribute="leading" secondItem="U7r-jg-RAi" secondAttribute="leading" id="Arg-H9-i8X"/>
+                                    <constraint firstAttribute="trailing" secondItem="M5M-q8-vcf" secondAttribute="trailing" id="Mtu-DV-oj5"/>
+                                    <constraint firstAttribute="trailing" secondItem="E0R-ol-AIz" secondAttribute="trailing" id="R5I-N7-azp"/>
+                                    <constraint firstItem="NM7-yB-UK6" firstAttribute="leading" secondItem="U7r-jg-RAi" secondAttribute="leading" id="Ria-dk-6ht"/>
+                                    <constraint firstItem="M5M-q8-vcf" firstAttribute="top" secondItem="U7r-jg-RAi" secondAttribute="top" constant="15" id="XWO-JP-u6j"/>
+                                    <constraint firstAttribute="bottom" secondItem="NM7-yB-UK6" secondAttribute="bottom" id="bpX-Lc-BzQ"/>
+                                    <constraint firstAttribute="height" constant="200" id="sPO-Dk-Fnh"/>
+                                    <constraint firstItem="NM7-yB-UK6" firstAttribute="top" secondItem="E0R-ol-AIz" secondAttribute="bottom" constant="3" id="tsI-aQ-xr4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radiusCorner">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="4jE-ar-g5b" firstAttribute="leading" secondItem="CyP-6R-GA1" secondAttribute="leading" id="6X8-Q1-AhA"/>
+                            <constraint firstItem="U7r-jg-RAi" firstAttribute="leading" secondItem="CyP-6R-GA1" secondAttribute="leading" constant="50" id="9K4-DU-1Mh"/>
+                            <constraint firstItem="4jE-ar-g5b" firstAttribute="top" secondItem="CyP-6R-GA1" secondAttribute="top" id="asg-X6-7Ae"/>
+                            <constraint firstItem="U7r-jg-RAi" firstAttribute="centerY" secondItem="CyP-6R-GA1" secondAttribute="centerY" id="bGx-PW-sS4"/>
+                            <constraint firstItem="CyP-6R-GA1" firstAttribute="trailing" secondItem="4jE-ar-g5b" secondAttribute="trailing" id="mS3-lx-xN9"/>
+                            <constraint firstItem="CyP-6R-GA1" firstAttribute="bottom" secondItem="4jE-ar-g5b" secondAttribute="bottom" id="vne-Cv-IyO"/>
+                            <constraint firstItem="CyP-6R-GA1" firstAttribute="trailing" secondItem="U7r-jg-RAi" secondAttribute="trailing" constant="50" id="zer-qn-S8a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CyP-6R-GA1"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonRetry" destination="NM7-yB-UK6" id="axw-je-PeG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6x-xz-zEC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249" y="815"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="connection-off" width="512" height="446"/>
+    </resources>
+</document>
